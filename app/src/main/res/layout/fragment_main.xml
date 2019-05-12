@@ -33,8 +33,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/input_keyword_edit_text"
         />
-        <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPager"
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_recyclerview"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 app:layout_constraintStart_toStartOf="parent"

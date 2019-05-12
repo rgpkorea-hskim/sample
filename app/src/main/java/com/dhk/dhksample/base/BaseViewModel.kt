@@ -28,16 +28,6 @@ abstract class BaseViewModel<REPO : Parcelable> : BaseObservable(), LifecycleObs
         }
     }
 
-    private var preClickTime : Long = 0
-
-    protected fun checkDoubleClick(onClick: () -> Unit) {
-        val currentClickTime = System.currentTimeMillis()
-        if(currentClickTime - preClickTime > 500) {
-            preClickTime = currentClickTime
-            onClick()
-        }
-    }
-
     override fun getLifecycle(): Lifecycle = lifecycleRegistry
 
     @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
